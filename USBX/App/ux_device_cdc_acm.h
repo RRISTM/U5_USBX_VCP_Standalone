@@ -5,9 +5,9 @@
   * @author  MCD Application Team
   * @brief   USBX Device CDC ACM interface header file
   ******************************************************************************
-    * @attention
+  * @attention
   *
-  * Copyright (c) 2023 STMicroelectronics.
+  * Copyright (c) 2021 STMicroelectronics.
   * All rights reserved.
   *
   * This software is licensed under terms that can be found in the LICENSE file
@@ -31,7 +31,8 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "main.h"
+#include "app_usbx_device.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -55,7 +56,8 @@ VOID USBD_CDC_ACM_Deactivate(VOID *cdc_acm_instance);
 VOID USBD_CDC_ACM_ParameterChange(VOID *cdc_acm_instance);
 
 /* USER CODE BEGIN EFP */
-
+VOID usbx_cdc_acm_read_check(ULONG thread_input);
+VOID usbx_cdc_acm_write(UCHAR* UserTxBufferFS,ULONG buffsize);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/

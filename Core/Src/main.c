@@ -22,6 +22,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ux_api.h"
+#include "ux_device_class_cdc_acm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -125,6 +126,7 @@ int main(void)
   while (1)
   {
 	  _ux_device_stack_tasks_run();
+    usbx_cdc_acm_read_check(0);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
